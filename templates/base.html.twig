@@ -47,10 +47,22 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Search">
-                <button class="btn btn-primary" type="button">Search</button>
-            </form>
+{#            <form class="d-flex">#}
+{#                <input class="form-control me-2" type="text" placeholder="Search">#}
+{#                <button class="btn btn-primary" type="button">Search</button>#}
+{#            </form>#}
+
+                <div class="dropdown d-flex">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown button
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">login</a></li>
+                        <li><a class="dropdown-item" href="#">logout</a></li>
+                    </ul>
+                </div>
+
         </div>
     </nav>
 {# END OF bootstrap 5 navbar #}
