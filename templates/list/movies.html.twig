@@ -9,9 +9,14 @@
                     <div class="card-header text-center">
                         Welcome to &nbsp;&nbsp;&nbsp; M o v i e s &nbsp; | &nbsp;&nbsp;
                         <a href="#" class="btn btn-primary active" role="button" aria-pressed="true">byDate</a>&nbsp;&nbsp;
+                        {% if app.user %}
                         <a href="{{ path('app_create_movie') }}" class="btn btn-success active" role="button" aria-pressed="true">add movie</a>
+                        {% endif %}
                     </div>
                 </div>
+                {% if app.user %}
+                <div class="text-center mb-3"> Welcome, {{ app.user.userIdentifier }}</div>
+                {% endif %}
 
                 {% for movie in movies %}
                 <div class="card border-secondery mb-3">
@@ -27,12 +32,14 @@
                     <div class="card-footer d-flex justify-content-between">
                         <div><span class="like-count">likes x</span> | <span class="dislike-count"> hates y </span></div>
 
+                        {% if app.user %}
                         <small>
                             <span title="likes" id="saveLikeDislike" data-type="like" data-post="#" class="mr-2 btn btn-sm btn-outline-primary d-inline font-weight-bold">
                             Like </span>
                             <span title="hates" id="saveLikeDislike" data-type="dislike" data-post="#" class="mr-2 btn btn-sm btn-outline-danger d-inline font-weight-bold">
                             Hate</span>
                         </small>
+                        {% endif %}
 
                         {# <div class="text-center"></div>#}
                         <div class="text-muted">{{ movie.createdAt.format('Y-m-d H:i:s') }}</div>
