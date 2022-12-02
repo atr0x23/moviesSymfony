@@ -10,12 +10,6 @@ use App\Entity\Movie;
 
 class CreateMovieController extends AbstractController
 {
-    #[Route('/create/movie', name: 'app_create_movie')]
-    public function index(): Response
-    {
-        return $this->render('create_movie/index.html.twig');
-    }
-
 //    #[Route('/movie', name: 'app_add_movie')]
 //    public function createMovie(ManagerRegistry $doctrine): Response {
 //
