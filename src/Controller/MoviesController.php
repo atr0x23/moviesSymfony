@@ -24,7 +24,7 @@ class MoviesController extends AbstractController
     }
 
     #[Route('/', name:'app_index')]
-    public function homepage(MovieRepository $movieRepository, EntityManagerInterface $em):Response {
+    public function homepage(MovieRepository $movieRepository):Response {
 
         $movies = $movieRepository->findAll();
 

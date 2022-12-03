@@ -15,14 +15,14 @@
                     </div>
                 </div>
                 {% if app.user %}
-                <div class="text-center mb-3"> Welcome, {{ app.user.userIdentifier }}</div>
+                <div class="text-center mb-3"> Welcome, {{ app.user.userIdentifier }} </div>
                 {% endif %}
 
                 {% for movie in movies %}
                 <div class="card border-secondery mb-3">
                     <div class="card-header d-flex justify-content-between">
                         <h3>{{ movie.title }}</h3>
-                        <div>By <a href="#"> {{ movie.userId }} </a></div>
+                        <div>By <a href="#"> {{ movie.user.email }} </a></div>
                     </div>
 
                     <div class="card-body">
